@@ -1,0 +1,115 @@
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1024px;
+
+
+/*mobile*/
+@mixin mobile {
+@media (min-widht: #{$mobile}) {
+
+    .menulist {position: absolute; 
+               flex-direction: column;
+               background: #2B3534;
+               width: 100%;}
+    
+    .header__logo {width: 150px;
+                   height: 150px;}
+    
+    .inicio__titulo {padding-top: 250px; 
+                     font-size: 30pt;}
+    
+    .inicio_texto {padding-top: 0px; 
+                   margin-bottom: 40px;}
+    
+    .galeria__titulo {padding-top: 250px; 
+                      font-size: 30pt;}
+    
+    .content {grid-template-columns: 50% 50%;}
+    
+    .contacto {margin-top: 300px;}
+    
+    .nosotros {display: grid;
+               grid-template-columns: 100%;
+               grid-template-areas: "titulo"
+                                    "texto"
+                                    "video";}
+    
+    .nosotros__titulo {padding-top: 250px; 
+                       font-size: 30pt;
+                       grid-area: titulo;}
+    
+    .nosotros__texto {display: block;
+                      font-size: 10pt; 
+                      width:100%; 
+                      margin-top: 0;
+                      margin-left: 5px;
+                      margin-right: 5px; 
+                      grid-area: texto;}
+    
+    .nosotros__video{ display: block;
+                      width:100%; 
+                      height: 40vh; 
+                      padding: 10px; 
+                      margin-top: 5px;
+                      margin-left: 1px;
+                      margin-right: 1px;
+                      grid-area: video;}
+    
+    .servicios {display: grid;
+                grid-template-columns: 100%;}
+    
+    .servicios__titulo {padding-top: 250px; 
+                        font-size: 30pt;}
+           
+    article{margin-top: 350px;
+            background-color: #2B3534;
+            width: 100%;
+            height: 60vh;
+            padding: 5px;
+            margin: 5px;
+            font-size: 20pt;}
+    
+    .servicios__img {width: 100%;
+                     position: relative; 
+                     height: 200px; 
+                     padding: 2px; 
+                     object-fit: cover; 
+                     margin-top: 5px;
+                     border-radius: 3px;}
+                   
+    .servicios__img:hover {transition: 1s;
+                           width:100%; 
+                           height: 250px;} 
+    }
+}
+    
+ 
+
+
+
+/*tablet*/
+@mixin tablet {
+@media (min-widht: #{$tablet}) {
+    .menulist {position: absolute;
+               width: 100%;}
+    
+    .header__logo {width: 200px;
+                   height: 200px;}
+    
+    .contacto {margin-left: 0px;}
+    }
+}
+    
+    
+    
+
+
+/*desktop*/
+@mixin desktop {
+@media (min-widht: #{$desktop}) {
+    .menulist {position: absolute;
+               width: 100%;}
+    .header__logo {width: 300px;
+                   height: 300px;}       
+    }
+}
