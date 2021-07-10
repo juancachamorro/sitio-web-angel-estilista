@@ -62,9 +62,7 @@ body {
   margin-top: 50px;
   margin-bottom: 50px; }
 
-/*mobile*/
-/*tablet*/
-/*desktop*/
+
 /*nav_bar*/
 .header .header__menu {
   width: 100%;
@@ -198,10 +196,11 @@ body {
 /*section_nosotros*/
 .nosotros {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 100%;
   grid-template-areas: "titulo titulo"
- "texto video"
- "testimonios testimonios";
+                       "texto texto"
+                       "video video"
+                       "testimonios testimonios";
   /*testimonios*/ }
   .nosotros .nosotros__titulo {
     color: #2B3534;
@@ -217,22 +216,26 @@ body {
     font-size: 12pt;
     text-align: center;
     grid-area: texto;
-    margin-top: 100px;
-    margin-left: 70px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: 40px;
+    margin-right: 40px;
     padding: 5px; }
   .nosotros .nosotros__video {
     grid-area: video;
-    width: 80%;
-    height: 60vh;
-    padding: 20px;
-    margin: auto; }
+    width: 80vh;
+    height: 50vh;
+    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;}
   .nosotros .container-testimonios {
     grid-area: testimonios;
     background-color: #2B3534;
     width: 90%;
+    height: 90%;
     margin: auto;
     padding: 0;
-    height: 90%;
     border-radius: 15px; }
     .nosotros .container-testimonios .titulo5 {
       color: #DEDC00;
